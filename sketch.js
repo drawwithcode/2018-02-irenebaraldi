@@ -3,7 +3,7 @@ function preload(){
 }
 
 function setup() {
-  createCanvas(800,600);
+  createCanvas(windowWidth, windowHeight);
   background(40);
   angleMode(DEGREES);
   frameRate(12);
@@ -13,14 +13,14 @@ function draw() {
   push();
   strokeWeight(0.2);
   stroke(color('#606060'),100);
-  translate(400,300);
+  translate(width/2,height/2);
   rotate(frameCount*10);
   noFill();
   ellipse(100,0,200,200);
   pop();
 
   push();
-  translate(400,300);
+  translate(width/2,height/2);
   //rotate(frameCount*3);
   noFill();
 
@@ -44,13 +44,13 @@ function draw() {
   pop();
 
   push();
-  translate(400,300);
+  translate(width/2,height/2);
   stroke(lerpColor(color('#FF9933'), color('#3399FF'), frameCount/120));
   noFill();
   line(100,0,cos(frameCount*3)*100,sin(frameCount*3)*100);
   pop();
 
-  translate(400,300);
+  translate(width/2,height/2);
   rotate(frameCount*3);
   stroke(224, 10);
   line(800,10,cos(frameCount)*100,sin(frameCount)*100);
